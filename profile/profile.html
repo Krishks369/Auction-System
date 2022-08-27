@@ -33,41 +33,48 @@
             <button href="">Home</button>
         </div>
     </nav>
-    <div class="container" style="margin-left:20px">
+ 
+    <div class="content">
+    <div class="container" style="margin-left:20px" width=30>
         <img src="../img/logo.jpg" alt="user" style="border-radius: 50%;margin-top: 4.5px;
         margin-left: 4px; margin-right: 10px;"
         height="150"
         width="150">
        <h2 style="font-family:sans-serif; margin-left: 20px; ">Name</h2>
        <h5 style="font-family:sans-serif ;margin-left: 20px; opacity: 0.75;">user name</h5>
-    </div>
-
-    <div class="tab-buttons">   
-        <div class="tab">
-            <button class="tablinks" onclick="userTabs(event, 'London')">In auction</button>
-            <button class="tablinks" onclick="userTabs(event, 'Paris')">History</button>
-            <button class="tablinks" onclick="userTabs(event, 'Tokyo')">Add item</button>
-          </div>
-        <div class="content-menu">
-          <div id="London" class="tabcontent">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
+      </div>
+      <div class="tab-buttons">
+            <button class="tablinks" onclick="userTabs(event, 'inAuction')">In auction</button>
+            <button class="tablinks" onclick="userTabs(event, 'history')">History</button>
+            <button class="tablinks"onclick="userTabs(event, 'addItem')" >Add item</button>
           </div>
           
-          <div id="Paris" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
+           <div class="content-menu">
+          <div id="inAuction" class="tabcontent">
+            <h3>inAuction</h3>
+            <p>inAuction </p>
           </div>
           
-          <div id="Tokyo" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
+          <div id="history" class="tabcontent" style="display:none">
+            <h3>History</h3>
+            <p>History is the capital of France.</p>
+          </div>
+          
+          <div id="addItem" class="tabcontent" style="display:none">
+            <h3>Add Item</h3>
+            <p>Add Item </p>
           </div>
         </div>
 
-    </div>
+    
+    <div>
+  
+         
+       
+    </div> 
+  
     <script>
-        function userTabs(evt, cityName) {
+        function userTabs(evt, action) {
           var i, tabcontent, tablinks;
           tabcontent = document.getElementsByClassName("tabcontent");
           for (i = 0; i < tabcontent.length; i++) {
@@ -77,10 +84,11 @@
           for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
           }
-          document.getElementById(cityName).style.display = "block";
+          document.getElementById(action).style.display = "block";
           evt.currentTarget.className += " active";
         }
-        </script>
-</body>
+        </script> 
+    
+      </body>
 
 </html>

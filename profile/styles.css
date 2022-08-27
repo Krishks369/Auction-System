@@ -120,10 +120,32 @@ form:focus-within,form:hover{
 
 /* main content */
 
-.tabcontent {
-    display: none;
+
+.content{
+    display:grid;
+    grid-template-columns: 15% 80% 
+ 
+   
 }
+.tab-buttons{
+    margin-top: 2em;
+}
+
+.tablinks {
+    float:right;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    margin-left: 10px;
+  
+} 
+
 .content-menu{
-    float:inline
+   position:absolute;
+   margin-top: 6em;
+   margin-left: 50%;
 }
 
